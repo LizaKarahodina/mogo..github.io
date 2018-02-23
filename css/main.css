@@ -789,6 +789,12 @@ input[type=radio]:checked + label::after {
 	font-size: 46px;
 	color: #ccc;
 }
+.icon-socialnet{
+	display: flex;
+	align-content: center;
+	align-items: center;
+	margin:15px 0 35px 0 ;
+}
 .button_subscribe {
    background: #95e1d3;
    color: #fff;
