@@ -34,7 +34,7 @@ header .container{
 	justify-content: space-between;
 	align-items: center;
 	
-	
+
 
 }
 .header_top{
@@ -55,6 +55,7 @@ header .container{
 	width: 60%;
 	justify-content: space-between;
 	flex-direction: row;
+	box-sizing: border-box;
 	
 }
 .menu_nav{
@@ -71,6 +72,7 @@ header .container{
 	padding-bottom: 14px;
 	text-decoration: none;
 	text-transform: uppercase;
+	box-sizing: border-box;
 	
 }
 .menu_nav a:hover{
@@ -87,7 +89,6 @@ header .container{
 	height: 17.625px ;
 	background: url(../img/search.svg);
 }
-
 
 .header_center{
 	display: flex;
@@ -255,6 +256,9 @@ header .container{
 .media-list-item{
    width: 31%;
    position: relative;
+   -webkit-transition:  0.3s; /* For Safari 3.1 to 6.0 */
+    transition:  0.3s;
+
 }
 .media-list-item__img{
 	width: 100%;
@@ -296,6 +300,8 @@ header .container{
 	font-weight: bold;
 	font-size: 18px;
 	margin-top: 10px;
+	-webkit-transition: opacity 0.3s; /* For Safari 3.1 to 6.0 */
+    transition:  opacity 0.3s;
 }
 .media-list__text2{
 	font-family:'Montserrat', sans-serif;
@@ -649,10 +655,11 @@ input[type=radio]:checked + label::after {
 .logos{
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 .logos__img{
 	display: block;
-	width: 14%;
+	width: 100%;
 	height: auto;
 }
 .media{
@@ -694,7 +701,7 @@ input[type=radio]:checked + label::after {
 }
 .what-say__img{
 	margin: 0 40px;
-	display: block;
+	
 	height: 110px;
 	width: 110px;
 }
@@ -868,4 +875,24 @@ input[type=radio]:checked + label::after {
 	padding: 25px 0;
 	text-align: center;
 
+}
+
+@media only screen and (max-width: 1024px) { 
+	.media-list{
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+	}
+	.media-list-item{
+		width: 65%;
+		margin-bottom: 30px;
+	}
+	.services{
+		flex-direction:column;
+		align-items: center;
+	}
+	.services__item{
+		width: 60%;
+	}
 }
