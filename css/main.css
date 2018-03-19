@@ -253,6 +253,12 @@ header .container{
 	justify-content: space-between;
 	 
 }
+.media-list__cover{
+	width: 31%;
+}
+.media-list__cover .media-list-item{
+		width: 100%;
+	}
 .media-list-item{
    width: 31%;
    position: relative;
@@ -293,6 +299,13 @@ header .container{
 	flex-direction: column;
 	align-items: center;
 
+}
+.media-list__text{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 30px;
 }
 .media-list__text1{
 	font-family:'Montserrat', sans-serif;
@@ -593,12 +606,7 @@ input[type=checkbox]:checked + label::after {
 input[type=radio]:checked + label::after {
   transform: rotateX(180deg);
 }
-.media-list-space-around{
-	display: flex;
-	justify-content: space-around;
-	margin-top: -40px;
-	margin-bottom: 40px;
-}
+
 .text-type1{
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
@@ -679,6 +687,7 @@ input[type=radio]:checked + label::after {
 }
 .media-list-colomn .media-list-item{
 	width: 100%;
+
 }
 .people-say{
 	background-image:linear-gradient(rgba(255,255,255,0.85),rgba(255,255,255,0.85)), url(../img/what_people_say1.jpg) ;
@@ -940,4 +949,4 @@ input[type=radio]:checked + label::after {
 	.subscribe-section ,.blogs-list ,.instagram {
 		width: 80%;
 	}
-}	
+}		
