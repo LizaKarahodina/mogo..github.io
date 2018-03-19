@@ -223,7 +223,7 @@
 	<section >
 		<div class="container">
 			<div class="slidershow">
-				<div class="slidershow__item fade">
+				<div class="slidershow__item1 fade">
 					<div class="slidershow__item-inside">
 						<img src="img/quote.png" alt="" class="slidershow__img">
 						<div class="slidershow__text">
@@ -232,7 +232,7 @@
 						</div>	
 					</div>
 				</div>
-				<div class="slidershow__item fade">
+				<div class="slidershow__item1 fade">
 					<div class="slidershow__item-inside">
 						<img src="img/quote.png" alt="" class="slidershow__img">
 						<div class="slidershow__text">
@@ -242,7 +242,7 @@
 						</div>	
 					</div>
 				</div>
-				<div class="slidershow__item fade">
+				<div class="slidershow__item1 fade">
 					<div class="slidershow__item-inside">
 						<img src="img/quote.png" alt="" class="slidershow__img">
 						<div class="slidershow__text">
@@ -257,9 +257,9 @@
 				<br>
 
 				<div style="text-align:center">
-				  <span class="slidershow__dot" onclick="currentSlide(1)"></span> 
-				  <span class="slidershow__dot" onclick="currentSlide(2)"></span> 
-				  <span class="slidershow__dot" onclick="currentSlide(3)"></span> 
+				  <span class="slidershow__dot1" onclick="currentSlide(1)"></span> 
+				  <span class="slidershow__dot1" onclick="currentSlide(2)"></span> 
+				  <span class="slidershow__dot1" onclick="currentSlide(3)"></span> 
 			    </div>
 
 			</div>
@@ -543,8 +543,11 @@
 			<h3 class="h3_main">What people say</h3>
 			<div class="what-say">
 				<div class="what-say__item">
-					<img src="img/people_say1.png" alt="people_say1" class="what-say__img">
-					<div class="what-say__text">
+					<div class="what-say__container-img">
+						<img src="img/people_say1.png" alt="people_say1" class="what-say__img">
+
+					</div>
+										<div class="what-say__text">
 						<span class="text-type1">Matthew Dix</span>
 						<span class="text-type2 text-type2--line-botom">Graphic Design</span>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -552,7 +555,10 @@
 					
 				</div>
 				<div class="what-say__item">
-					<img src="img/people_say2.png" alt="people_say2" class="what-say__img">
+					<div class="what-say__container-img">
+						<img src="img/people_say2.png" alt="people_say2" class="what-say__img">
+					</div>
+					
 					<div class="what-say__text">
 						<span class="text-type1">Nick Karvounis</span>
 						<span class="text-type2 text-type2--line-botom">Graphic Design</span>
@@ -561,7 +567,10 @@
 					
 				</div>
 				<div class="what-say__item">
-					<img src="img/people_say3.png" alt="people_say3" class="what-say__img">
+					<div class="what-say__container-img">
+						<img src="img/people_say3.png" alt="people_say3" class="what-say__img">
+					</div>
+					
 					<div class="what-say__text">
 						<span class="text-type1">Jaelynn Castillo</span>
 						<span class="text-type2 text-type2--line-botom">Graphic Design</span>
@@ -570,7 +579,10 @@
 					
 				</div>
 				<div class="what-say__item">
-					<img src="img/people_say4.png" alt="people_say4" class="what-say__img">
+					<div class="what-say__container-img">
+						<img src="img/people_say4.png" alt="people_say4" class="what-say__img">
+					</div>
+					
 					<div class="what-say__text">
 						<span class="text-type1">Mike Petrucci</span>
 						<span class="text-type2 text-type2--line-botom">Graphic Design</span>
@@ -597,6 +609,8 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
+  var slides1 = document.getElementsByClassName("slidershow__item1");
+  var dots1 = document.getElementsByClassName("slidershow__dot1");
   var slides = document.getElementsByClassName("slidershow__item");
   var dots = document.getElementsByClassName("slidershow__dot");
   if (n > slides.length) {slideIndex = 1}    
@@ -609,6 +623,17 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
+
+  if (n > slides1.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides1.length}
+  for (i = 0; i < slides1.length; i++) {
+      slides1[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots1[i].className = dots1[i].className.replace(" active", "");
+  }
+  slides1[slideIndex-1].style.display = "block";  
+  dots1[slideIndex-1].className += " active";
 }
 </script>
 	<section>
@@ -762,3 +787,4 @@ function showSlides(n) {
 
 </body>
 </html>
+
