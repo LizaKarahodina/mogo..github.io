@@ -878,6 +878,15 @@ input[type=radio]:checked + label::after {
 }
 
 @media only screen and (max-width: 1024px) { 
+	.h4_main{
+		font-size: 36px
+	}
+	.h3_main{
+		font-size: 45px;
+	}
+	.p{
+		font-size: 24px;
+	}
 	.media-list{
 		justify-content: center;
 		align-items: center;
@@ -885,7 +894,7 @@ input[type=radio]:checked + label::after {
 
 	}
 	.media-list-item{
-		width: 65%;
+		width: 100%;
 		margin-bottom: 30px;
 	}
 	.services{
@@ -894,5 +903,19 @@ input[type=radio]:checked + label::after {
 	}
 	.services__item{
 		width: 60%;
+		border-top: 1px solid #e5e5e5;
+	}
+	.services__item:first-child{
+		border-top: none;
+	}
+	.services__h3{
+		font-size: 21px;
+	}
+	.services2{
+		flex-direction:column;
+		align-items: center;
+	}
+	.services2__item{
+		width: 90%;
 	}
 }
