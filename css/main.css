@@ -955,4 +955,11 @@ input[type=radio]:checked + label::after {
 	.subscribe-section ,.blogs-list ,.instagram {
 		width: 80%;
 	}
+	.what-say{
+		flex-direction: column;
+		align-items: center;
+	}
+	.what-say__item{
+		width: 80%;
+	}
 }				
