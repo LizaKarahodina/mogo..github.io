@@ -917,6 +917,12 @@ input[type=radio]:checked + label::after {
 		margin-bottom: none;
 	
 	}
+	.text-type1{
+		font-size: 30px;
+	}
+	.text-type2{
+		font-size: 28px;
+	}
 	.services{
 		flex-direction:column;
 		align-items: center;
