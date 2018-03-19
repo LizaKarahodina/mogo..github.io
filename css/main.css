@@ -893,16 +893,27 @@ input[type=radio]:checked + label::after {
 		flex-direction: column;
 
 	}
-	.media-list-item{
+	.media-list__cover{
+		width: 90%;
+	}
+	.media-list__cover .media-list-item{
 		width: 100%;
+	}
+	
+	.media-list-item{
+		width: 90%;
 		margin-bottom: 30px;
+	}
+	.media-list-colomn .media-list-item{
+		margin-bottom: none;
+	
 	}
 	.services{
 		flex-direction:column;
 		align-items: center;
 	}
 	.services__item{
-		width: 60%;
+		width: 80%;
 		border-top: 1px solid #e5e5e5;
 	}
 	.services__item:first-child{
@@ -918,4 +929,15 @@ input[type=radio]:checked + label::after {
 	.services2__item{
 		width: 90%;
 	}
-}
+	.blog-item{
+		width: 90%;
+		margin-bottom: 30px;
+
+	}
+	.blog-item:last-child{
+		margin-bottom:none;
+	}
+	.subscribe-section ,.blogs-list ,.instagram {
+		width: 80%;
+	}
+}	
